@@ -24,8 +24,8 @@ public class StudentMapper {
 
     public static List<StudentResponse> toDTOList(List<Student> students) {
         return students.stream()
-                .map(StudentMapper::toDTO) // Mapeia cada Student para StudentResponse
-                .collect(Collectors.toList()); // Coleta os resultados em uma lista
+                .map(StudentMapper::toDTO) //Mapeia cada Student para StudentResponse.
+                .collect(Collectors.toList()); //Coleta os resultados em uma lista.
     }
 }
 
