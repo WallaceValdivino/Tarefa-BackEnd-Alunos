@@ -51,14 +51,11 @@ public class StudentController {
     public ResponseEntity<StudentResponse> save(@Validated  @RequestBody StudentRequest student){
         var savedStudent = this.service.save(student);
         URI location = ServletUriComponentsBuilder
-
                 .fromCurrentRequest()
-
                 .path("/{id}")
-
                 .buildAndExpand(savedStudent.id())
-
                 .toUri();
+                
         return ResponseEntity.created(location).body(savedStudent);
     }
 
